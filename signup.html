@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form Page</title>
+  <style>
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <h1>Registration Form</h1>
+  <form id="registrationForm" onsubmit="validateForm(event)">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    <span id="nameError" class="error"></span>
+    <br><br>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+    <span id="passwordError" class="error"></span>
+    <br><br>
+    <input type="submit" value="Submit">
+  </form>
+
+  <script>
+    function validateForm(event) {
+      event.preventDefault(); // Prevent form submission
+
+      // Get form values
+      var name = document.getElementById("name").value;
+      var password = document.getElementById("password").value;
+
+      // Reset error messages
+      document.getElementById("nameError").innerHTML = "";
+      document.getElementById("passwordError").innerHTML = "";
+
+      // Validate name length
+      if (name.length < 3) {
+        document.getElementById("nameError").innerHTML = "Name must be greater than 2 letters";
+        return;
+      }
+
+      // Validate password strength
+      var passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+      if (!passwordRegex.test(password)) {
+        document.getElementById("passwordError").innerHTML = "Password must include at least one lowercase letter, one uppercase letter, one number, and one special symbol (@$!%*?&)";
+        return;
+      }
+
+      // If form is valid, proceed with form submission
+      document.getElementById("registrationForm").submit();
+    }
+  </script>
+</body>
+</html>

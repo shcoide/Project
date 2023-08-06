@@ -1,0 +1,37 @@
+<section class="model" id="popup">
+    <form action="/submit" class="box animate" id="mod-box-1" method="POST">
+        <div class="imgcontainer">
+            <span onclick="end_login()" class="close" title="Close Modal">&times;</span>
+            <img src="logo_2.png" alt="Avatar" class="avatar">
+          </div>
+      
+          <div class="lgn_container">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="username" required>
+      
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="password" required>
+              
+            <button type="submit" class="btnlgn">Login</button>
+            <label>
+              <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+          </div>
+      
+          <div class="lgn_container" style="background-color:#f1f1f1">
+            <button type="button" onclick="end_login()" class="cancelbtn">Cancel</button>
+            <span class="psw">Forgot <a href="#">password?</a></span>
+          </div>
+    </form>
+</section>
+
+<div class="main_logsgn border" id="section4">
+    <div class="main_logsgn_txt border" id="txt1">
+        <h3>Login</h3>
+        <p>Lorem ipsum, dolor sit amet Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae quod similique repellendus. consectetur adipisicing elit. Totam commodi maiores recusandae earum quasi aliquam eos deleniti, nobis atque odit!</p>
+    </div>
+    <div class="main_btn border" id="btn_main_lgn">
+        <button class="bttns" id="log_in_main" onclick="start_login()">Login</button>
+        <button class="bttns" id="sign_up_main" onclick="signuppage()">Signup</button>
+    </div>
+</div>

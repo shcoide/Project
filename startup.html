@@ -1,0 +1,78 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./form.css">
+    <title>Startup</title>
+</head>
+<body>
+    <header class="nav-1 border">
+        <navbar class="navigation">
+            <ul class="nav_menu">
+                <!-- <li id="nav_it1" class="logo"><a href="index.html"><img src="logo_main_2.png" alt="Error Loading"></a></li> -->
+            </ul>
+            <ul class="nav_menu">
+                <li id="nav_it2" class="pos_center borderleft"><a href="index.html">Home</a></li>
+                <li id="nav_it3" class="pos_center"><a href="index.html">About</a></li>
+                <li id="nav_it4" class="pos_center"><a href="startup.html">Company</a></li>
+                <li id="nav_it5" class="pos_center"><a href="CA.html">Person</a></li>
+                <li id="nav_it6" class="pos_center"><a href="index.html">Media Links</a></li>
+            </ul>
+        </navbar>
+    </header>
+    <section class="details border" id="details1">
+        <div class="line">
+            <h3 style="font-family: monospace;text-align: center;">Form for Company</h3>
+            <h4 style="font-family: monospace; font-style: italics; text-align: center;">(Please Fill out this form)</h4>
+        </div>
+        <div class="form" id="form">
+            <form action="/" method="post" class="border" onsubmit="REGISTRATION(event)">
+                <div class="name border">
+                    <label for="fname">First name</label>
+                    <input type="text" name="firstname" id="fname" required>
+                    <label for="lname">Last name</label>
+                    <input type="text" name="lastname" id="lname" required>
+                </div>
+                <div class="cname">
+                    <label for="cname">Company's name</label>
+                    <input type="text" name="companyname" id="cname" required>
+                </div>
+                <div class="start">
+                    <label for="date">Starting Date</label>
+                    <input type="date" name="companydate" id="date" required>
+                </div>
+                <div class="position">
+                    <label for="position">What's your position?</label>
+                    <select name="personposition" id="position" required>
+                        <option value="CEO">CEO</option>
+                        <option value="cofounder">Co-founder</option>
+                        <option value="techhead">Tech Head</option>
+                        <option value="marketting">Marketting</option>
+                        <option value="markettinghead">Marketting Head</option>
+                        <option value="sdev">Senior Developer</option>
+                        <option value="jdev">Junior Developer</option>
+                        <option value="jsales">Junior Sales</option>
+                        <option value="ssales">Senior Sales</option>
+                        <option value="none" selected>-----</option>
+                    </select>
+                </div>
+                <div class="email">
+                    <label for="Email">Email</label>
+                    <input type="email" name="email" id="Email" required>
+                </div>
+                <div class="numb">
+                    <label for="num">Number</label>
+                    <input type="number" name="pnum" id="num" required>
+                </div>
+                <div class="submit">
+                    <button type="submit" class="bttns">Submit</button>
+                    <button type="reset" class="bttns">Reset</button>
+                </div>
+            </form>
+        </div>
+    </section>
+    <script src="form.js"></script>
+</body>
+</html>
